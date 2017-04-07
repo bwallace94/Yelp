@@ -11,10 +11,15 @@ import UIKit
 class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var businesses: [Business]!
+    var filteredBusinsses: [Business]!
+    var searchController: UISearchController!
     
     @IBOutlet weak var businessTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            return filteredBusinsses!.count
+        }
         if businesses != nil {
             return businesses!.count
         } else {
@@ -24,7 +29,11 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = businessTableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessCell
-        cell.business = businesses[indexPath.row]
+        if searchController.isActive && searchController.searchBar.text != "" {
+            cell.business = filteredBusinsses[indexPath.row]
+        } else {
+            cell.business = businesses[indexPath.row]
+        }
         return cell
     }
     
@@ -35,7 +44,13 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         businessTableView.dataSource = self
         businessTableView.rowHeight = UITableViewAutomaticDimension
         businessTableView.estimatedRowHeight = 120
-        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Business Names"
+        searchController.hidesNavigationBarDuringPresentation = false
+        navigationItem.titleView = searchController.searchBar
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
@@ -77,4 +92,24 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
      }
      */
     
+    func filterContentForSearchText(_ searchText: String) {
+        self.filteredBusinsses = self.businesses.filter({(business) -> Bool in
+            let businessName = business.name!
+            return businessName.lowercased().contains(searchText.lowercased())
+        })
+        businessTableView.reloadData()
+    }
+    
+}
+
+extension BusinessesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!)
+    }
+}
+
+extension BusinessesViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
 }
