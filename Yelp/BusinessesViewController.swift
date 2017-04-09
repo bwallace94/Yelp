@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FiltersViewControllerDelegate {
     
     var businesses: [Business]!
     var filteredBusinsses: [Business]!
@@ -27,6 +27,10 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = businessTableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessCell
         if searchController.isActive && searchController.searchBar.text != "" {
@@ -35,6 +39,24 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.business = businesses[indexPath.row]
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let filtersViewController = navigationController.topViewController as! FiltersViewController
+        filtersViewController.delegate = self
+    }
+    
+    func filterViewConroller(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : Any]) {
+        let categories = filters["categories"] as? [String]
+        let sort = filters["sort"] as? YelpSortMode
+        let deal = filters["deal"] as? Bool
+        let distance = filters["distance"] as? String
+        
+        Business.searchWithTerm(term: "Restaurants", sort: sort, categories: categories, distance: distance, deals: deal) { (businesses: [Business]!, error: Error!) -> Void in
+            self.businesses = businesses
+            self.businessTableView.reloadData()
+        }
     }
     
     override func viewDidLoad() {
@@ -51,7 +73,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         searchController.searchBar.placeholder = "Search Business Names"
         searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.titleView = searchController.searchBar
-        Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
+        Business.searchWithTerm(term: "Restaurants", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
             self.businessTableView.reloadData()
