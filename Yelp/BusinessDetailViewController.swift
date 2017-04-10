@@ -10,9 +10,51 @@ import UIKit
 
 class BusinessDetailViewController: UIViewController {
     
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ratingImageView: UIImageView!
+    @IBOutlet weak var reviewCountLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var categoriesLabel: UILabel!
+    @IBOutlet weak var displayNumberLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var thumbImageView: UIImageView!
+    
+    
     var business: Business! {
         didSet {
-            
+            print(business.snippetText ?? "NO TEXT")
+            if business.snippetText != nil {
+                descriptionLabel.text = business.snippetText!
+            }
+            if business.distance != nil {
+                distanceLabel.text = business.distance!
+            }
+            if business.url != nil {
+                urlLabel.text = business.url!
+            }
+            if business.displayPhone != nil {
+                displayNumberLabel.text = business.displayPhone!
+            }
+            if business.categories != nil {
+                categoriesLabel.text = business.categories!
+            }
+            if business.address != nil {
+                addressLabel.text = business.address!
+            }
+            if business.name != nil {
+                nameLabel.text = business.name!
+            }
+            if business.ratingImageURL != nil {
+                ratingImageView.setImageWith(business.ratingImageURL!)
+            }
+            if business.reviewCount != nil {
+                reviewCountLabel.text = "\(business.reviewCount!)"
+            }
+            if business.imageURL != nil {
+                thumbImageView.setImageWith(business.imageURL!)
+            }
         }
     }
 

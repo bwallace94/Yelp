@@ -129,6 +129,7 @@
                                             <outlet property="ratingImageView" destination="0hG-q8-Fgl" id="9VZ-mp-50E"/>
                                             <outlet property="reviewsCountLabel" destination="6Hi-0X-Hr6" id="1jv-KR-1zH"/>
                                             <outlet property="thumbImageView" destination="VWq-n2-xep" id="ulb-fg-PMR"/>
+                                            <segue destination="8mF-cd-Dqn" kind="show" id="CwM-MV-V4O"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -162,6 +163,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504.8000000000002" y="357.57121439280365"/>
+        </scene>
+        <!--Business Detail View Controller-->
+        <scene sceneID="uK2-yM-sxg">
+            <objects>
+                <viewController id="8mF-cd-Dqn" customClass="BusinessDetailViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kkI-J8-Z0r"/>
+                        <viewControllerLayoutGuide type="bottom" id="tNO-av-EGY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Sv-Su-3qw">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-B6-Mva">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-Ke-ZWj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-MB-a8A">
+                                <rect key="frame" x="94" y="95" width="187" height="30"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPl-2w-KVC">
+                                <rect key="frame" x="24" y="24" width="42" height="17"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
+                                <rect key="frame" x="73" y="230.5" width="229" height="25"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="176-Fp-Ehf">
+                                <rect key="frame" x="131" y="129" width="113" height="17"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Wildfire.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mb-xf-81r">
+                                <rect key="frame" x="134" y="257.5" width="107" height="25"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Here is a description of the restaurant!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOA-au-15l">
+                                <rect key="frame" x="64" y="325.5" width="247" height="44"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-g6-Uu6">
+                                <rect key="frame" x="336" y="24" width="15" height="17"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cw-6q-9l1">
+                                <rect key="frame" x="132" y="154" width="112" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="1De-R0-88y"/>
+                                    <constraint firstAttribute="height" constant="30" id="yam-Cr-GBN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-M3-HRx">
+                                <rect key="frame" x="152" y="186" width="71.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                <color key="textColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(917) 334-4583" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-M6-tcx">
+                                <rect key="frame" x="121" y="284.5" width="134" height="25"/>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HfL-B6-Mva" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" id="0cH-kK-oCY"/>
+                            <constraint firstItem="JtA-M3-HRx" firstAttribute="top" secondItem="0Cw-6q-9l1" secondAttribute="bottom" constant="2" id="2Ae-58-K0K"/>
+                            <constraint firstAttribute="trailing" secondItem="6TH-Ke-ZWj" secondAttribute="trailing" id="4om-S7-5si"/>
+                            <constraint firstItem="TxG-g6-Uu6" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" constant="24" id="7bw-Jc-LSj"/>
+                            <constraint firstAttribute="trailing" secondItem="TxG-g6-Uu6" secondAttribute="trailing" constant="24" id="87v-Ux-JgY"/>
+                            <constraint firstAttribute="trailing" secondItem="HfL-B6-Mva" secondAttribute="trailing" id="AvO-kn-05b"/>
+                            <constraint firstItem="TOA-au-15l" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" constant="64" id="EUB-TS-Tyn"/>
+                            <constraint firstItem="QKr-WO-Nas" firstAttribute="top" secondItem="JtA-M3-HRx" secondAttribute="bottom" constant="28" id="EqW-KQ-9to"/>
+                            <constraint firstItem="tNO-av-EGY" firstAttribute="top" secondItem="6TH-Ke-ZWj" secondAttribute="bottom" id="FNQ-Ub-Ads"/>
+                            <constraint firstItem="JtA-M3-HRx" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="HIh-w4-Op3"/>
+                            <constraint firstItem="0Cw-6q-9l1" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="NDC-Br-jvT"/>
+                            <constraint firstItem="QKr-WO-Nas" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="Nnx-X1-Gvg"/>
+                            <constraint firstItem="nPl-2w-KVC" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" constant="24" id="P16-Ip-1CM"/>
+                            <constraint firstItem="6TH-Ke-ZWj" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" id="PYJ-7I-oAy"/>
+                            <constraint firstAttribute="trailing" secondItem="TOA-au-15l" secondAttribute="trailing" constant="64" id="Q36-NX-aKq"/>
+                            <constraint firstItem="4vE-MB-a8A" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="Qes-eT-e1M"/>
+                            <constraint firstItem="0Cw-6q-9l1" firstAttribute="top" secondItem="176-Fp-Ehf" secondAttribute="bottom" constant="8" id="Rc3-aC-eNE"/>
+                            <constraint firstItem="6TH-Ke-ZWj" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" id="RzC-Wb-X2M"/>
+                            <constraint firstItem="176-Fp-Ehf" firstAttribute="top" secondItem="4vE-MB-a8A" secondAttribute="bottom" constant="4" id="UZP-uK-f1I"/>
+                            <constraint firstItem="4vE-MB-a8A" firstAttribute="top" secondItem="2Sv-Su-3qw" secondAttribute="top" constant="95" id="aDc-y6-HPj"/>
+                            <constraint firstItem="Spy-M6-tcx" firstAttribute="top" secondItem="3Mb-xf-81r" secondAttribute="bottom" constant="2" id="b4c-WP-6zI"/>
+                            <constraint firstItem="176-Fp-Ehf" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="bbi-UB-Ufe"/>
+                            <constraint firstItem="3Mb-xf-81r" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="bnW-bi-HGj"/>
+                            <constraint firstItem="HfL-B6-Mva" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" id="cOI-8P-8Lo"/>
+                            <constraint firstItem="Spy-M6-tcx" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="fgK-5Y-Bar"/>
+                            <constraint firstItem="nPl-2w-KVC" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" constant="24" id="fz6-RE-yE2"/>
+                            <constraint firstItem="tNO-av-EGY" firstAttribute="top" secondItem="HfL-B6-Mva" secondAttribute="bottom" id="jMT-gG-DEF"/>
+                            <constraint firstItem="3Mb-xf-81r" firstAttribute="top" secondItem="QKr-WO-Nas" secondAttribute="bottom" constant="2" id="nLu-3F-31C"/>
+                            <constraint firstItem="TOA-au-15l" firstAttribute="top" secondItem="Spy-M6-tcx" secondAttribute="bottom" constant="16" id="xtH-AF-3vE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="QKr-WO-Nas" id="mcP-kU-Zdw"/>
+                        <outlet property="categoriesLabel" destination="176-Fp-Ehf" id="Zk0-JT-Ir5"/>
+                        <outlet property="descriptionLabel" destination="TOA-au-15l" id="FEx-0r-2t4"/>
+                        <outlet property="displayNumberLabel" destination="Spy-M6-tcx" id="6PH-hV-jTs"/>
+                        <outlet property="distanceLabel" destination="nPl-2w-KVC" id="iUF-bs-mmw"/>
+                        <outlet property="nameLabel" destination="4vE-MB-a8A" id="llx-EI-YqV"/>
+                        <outlet property="ratingImageView" destination="0Cw-6q-9l1" id="iQx-dM-ef4"/>
+                        <outlet property="reviewCountLabel" destination="JtA-M3-HRx" id="zYv-Tq-T44"/>
+                        <outlet property="thumbImageView" destination="HfL-B6-Mva" id="DZS-tb-U5D"/>
+                        <outlet property="urlLabel" destination="3Mb-xf-81r" id="1va-De-cKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqQ-Vf-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="1041.2293853073463"/>
         </scene>
         <!--Filters-->
         <scene sceneID="ruK-6e-o12">
