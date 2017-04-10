@@ -9,8 +9,19 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Yelp-->
+        <!--Businesses View Controller-->
         <scene sceneID="5L9-Uz-lNK">
             <objects>
                 <viewController id="2xI-yr-O5N" customClass="BusinessesViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,89 +33,92 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KGB-L9-X8e">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KGB-L9-X8e">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="102" id="bLz-7C-B40" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="115" id="bLz-7C-B40" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bLz-7C-B40" id="QRj-MW-wEq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-n2-xep">
-                                                    <rect key="frame" x="8" y="8" width="65" height="65"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="65" id="IQ7-Zm-YKr"/>
-                                                        <constraint firstAttribute="height" constant="65" id="tCn-hr-z1y"/>
-                                                    </constraints>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VWq-n2-xep">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-tg-z1M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qx-0Q-0uf">
-                                                    <rect key="frame" x="81" y="8" width="234" height="18"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="118" y="16" width="140" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                                    <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiX-q8-Kxh">
-                                                    <rect key="frame" x="81" y="60.5" width="108" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="8" y="99.5" width="113" height="7"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                                    <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-0X-Hr6">
-                                                    <rect key="frame" x="166" y="30" width="57" height="11"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="152" y="57" width="71.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                                    <color key="textColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gck-Is-PNc">
-                                                    <rect key="frame" x="331" y="8" width="36" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="325.5" y="90" width="41.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                                                    <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-q8-Fgl">
-                                                    <rect key="frame" x="81" y="28" width="83" height="15"/>
+                                                    <rect key="frame" x="146" y="40" width="83" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="83" id="FjA-D5-PyH"/>
                                                         <constraint firstAttribute="height" constant="15" id="xEv-TD-IcJ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-hK-HyB">
-                                                    <rect key="frame" x="81" y="45" width="278" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxG-hK-HyB">
+                                                    <rect key="frame" x="8" y="78" width="178.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="14"/>
+                                                    <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ook-QI-BRb">
-                                                    <rect key="frame" x="352.5" y="20" width="14.5" height="13.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <rect key="frame" x="352.5" y="8" width="14.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                     <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="7qx-0Q-0uf" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="05I-4W-oOo"/>
+                                                <constraint firstItem="6Hi-0X-Hr6" firstAttribute="top" secondItem="0hG-q8-Fgl" secondAttribute="bottom" constant="2" id="0GZ-WQ-siE"/>
                                                 <constraint firstAttribute="trailing" secondItem="ook-QI-BRb" secondAttribute="trailing" constant="8" id="0ew-J1-D4W"/>
-                                                <constraint firstItem="7qx-0Q-0uf" firstAttribute="leading" secondItem="VWq-n2-xep" secondAttribute="trailing" constant="8" id="1j8-ZD-hed"/>
+                                                <constraint firstAttribute="bottom" secondItem="gck-Is-PNc" secondAttribute="bottom" constant="8" id="1on-L5-kt5"/>
                                                 <constraint firstAttribute="trailing" secondItem="gck-Is-PNc" secondAttribute="trailing" constant="8" id="4kF-Ki-5wN"/>
-                                                <constraint firstItem="VWq-n2-xep" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="8" id="Aae-kk-okX"/>
-                                                <constraint firstItem="VWq-n2-xep" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="8" id="BXr-ZZ-Kz2"/>
-                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="leading" secondItem="VWq-n2-xep" secondAttribute="trailing" constant="8" id="Exg-rx-02X"/>
-                                                <constraint firstItem="wiX-q8-Kxh" firstAttribute="leading" secondItem="VWq-n2-xep" secondAttribute="trailing" constant="8" id="Gt2-Am-q7o"/>
-                                                <constraint firstItem="gck-Is-PNc" firstAttribute="leading" secondItem="7qx-0Q-0uf" secondAttribute="trailing" constant="16" id="TMJ-wG-2vC"/>
-                                                <constraint firstItem="gck-Is-PNc" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="8" id="V7P-Oi-tO9"/>
-                                                <constraint firstItem="6Hi-0X-Hr6" firstAttribute="leading" secondItem="0hG-q8-Fgl" secondAttribute="trailing" constant="2" id="WZr-EW-IAd"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="wiX-q8-Kxh" secondAttribute="bottom" constant="8" id="aXo-i4-Slb"/>
-                                                <constraint firstItem="IxG-hK-HyB" firstAttribute="top" secondItem="0hG-q8-Fgl" secondAttribute="bottom" constant="2" id="bIh-OO-uTC"/>
-                                                <constraint firstItem="7qx-0Q-0uf" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="8" id="gHR-Si-4rg"/>
+                                                <constraint firstAttribute="trailing" secondItem="aEU-tg-z1M" secondAttribute="trailing" id="4q4-BK-sp0"/>
+                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="5rC-RI-6k8"/>
+                                                <constraint firstAttribute="trailing" secondItem="VWq-n2-xep" secondAttribute="trailing" id="6uP-kv-BT7"/>
+                                                <constraint firstAttribute="bottom" secondItem="aEU-tg-z1M" secondAttribute="bottom" id="HA7-Yg-HoV"/>
+                                                <constraint firstItem="ook-QI-BRb" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="8" id="P4A-hv-upV"/>
+                                                <constraint firstItem="VWq-n2-xep" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" id="TrR-5H-hlh"/>
+                                                <constraint firstItem="aEU-tg-z1M" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" id="U2P-pD-yDG"/>
+                                                <constraint firstAttribute="bottom" secondItem="VWq-n2-xep" secondAttribute="bottom" id="W6K-mx-iQm"/>
+                                                <constraint firstItem="IxG-hK-HyB" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="8" id="abS-Ko-6MS"/>
+                                                <constraint firstItem="VWq-n2-xep" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" id="fNj-w2-jWP"/>
+                                                <constraint firstAttribute="bottom" secondItem="wiX-q8-Kxh" secondAttribute="bottom" constant="8" id="frz-fe-E8G"/>
+                                                <constraint firstItem="7qx-0Q-0uf" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="16" id="gHR-Si-4rg"/>
+                                                <constraint firstItem="IxG-hK-HyB" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="topMargin" constant="70" id="gPa-NV-IqM"/>
                                                 <constraint firstItem="wiX-q8-Kxh" firstAttribute="top" secondItem="IxG-hK-HyB" secondAttribute="bottom" constant="2" id="gtH-hU-zWj"/>
                                                 <constraint firstItem="0hG-q8-Fgl" firstAttribute="top" secondItem="7qx-0Q-0uf" secondAttribute="bottom" constant="2" id="h3T-uy-87R"/>
-                                                <constraint firstItem="ook-QI-BRb" firstAttribute="top" secondItem="gck-Is-PNc" secondAttribute="bottom" id="hAp-Nw-TNI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="IxG-hK-HyB" secondAttribute="trailing" constant="8" id="kfm-Cm-tjh"/>
-                                                <constraint firstItem="6Hi-0X-Hr6" firstAttribute="centerY" secondItem="0hG-q8-Fgl" secondAttribute="centerY" id="lLU-t6-ij4"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VWq-n2-xep" secondAttribute="bottom" constant="12" id="rgR-ZA-7Bl"/>
-                                                <constraint firstItem="IxG-hK-HyB" firstAttribute="leading" secondItem="VWq-n2-xep" secondAttribute="trailing" constant="8" id="uns-NP-v07"/>
+                                                <constraint firstItem="aEU-tg-z1M" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" id="pV3-tf-edf"/>
+                                                <constraint firstItem="wiX-q8-Kxh" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="8" id="vAC-pj-kL7"/>
+                                                <constraint firstItem="6Hi-0X-Hr6" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="yi2-zy-JMg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -128,22 +142,26 @@
                             <constraint firstAttribute="trailing" secondItem="KGB-L9-X8e" secondAttribute="trailing" id="zTU-S1-i0n"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yelp" id="wFh-9z-cC0">
-                        <barButtonItem key="leftBarButtonItem" title="Filters" id="yBO-zF-Qex">
+                    <navigationItem key="navigationItem" id="wFh-9z-cC0">
+                        <barButtonItem key="leftBarButtonItem" image="Filter" id="yBO-zF-Qex">
+                            <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="5hJ-38-PWS" kind="presentation" id="7tX-tm-G3Y"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="Da5-VM-1kS"/>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="Da5-VM-1kS">
+                            <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="businessTableView" destination="KGB-L9-X8e" id="W6t-vL-3k2"/>
+                        <outlet property="filterButton" destination="yBO-zF-Qex" id="tVU-Lp-Ifq"/>
                         <outlet property="mapButton" destination="Da5-VM-1kS" id="lm1-Ix-X0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2505" y="358"/>
+            <point key="canvasLocation" x="2504.8000000000002" y="357.57121439280365"/>
         </scene>
         <!--Filters-->
         <scene sceneID="ruK-6e-o12">
@@ -157,32 +175,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-d5-Sex">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-d5-Sex">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="88" id="IM9-ZE-G2x" customClass="SwitchCell" customModule="Yelp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IM9-ZE-G2x" id="2SG-sn-Xsc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqj-91-sQz">
-                                                    <rect key="frame" x="8" y="33.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="32" y="32" width="45" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7sg-7q-LuH">
-                                                    <rect key="frame" x="318" y="28.5" width="51" height="31"/>
+                                                    <rect key="frame" x="294" y="28.5" width="51" height="31"/>
+                                                    <color key="onTintColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="thumbTintColor" red="0.53333333329999999" green="0.5450980392" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </switch>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swT-eS-p1P">
+                                                    <rect key="frame" x="0.0" y="86" width="375" height="2"/>
+                                                    <color key="backgroundColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="7Do-4n-4di"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="swT-eS-p1P" secondAttribute="bottom" id="GWZ-OH-g2U"/>
+                                                <constraint firstAttribute="trailing" secondItem="swT-eS-p1P" secondAttribute="trailing" id="Nkm-0j-3co"/>
                                                 <constraint firstItem="Hqj-91-sQz" firstAttribute="centerY" secondItem="2SG-sn-Xsc" secondAttribute="centerY" id="b8f-Hr-TEs"/>
+                                                <constraint firstItem="swT-eS-p1P" firstAttribute="leading" secondItem="2SG-sn-Xsc" secondAttribute="leading" id="kK0-99-6Cl"/>
                                                 <constraint firstItem="7sg-7q-LuH" firstAttribute="centerY" secondItem="2SG-sn-Xsc" secondAttribute="centerY" id="ps4-Sp-86m"/>
-                                                <constraint firstItem="Hqj-91-sQz" firstAttribute="leading" secondItem="2SG-sn-Xsc" secondAttribute="leading" constant="8" id="wPq-Zs-TLU"/>
-                                                <constraint firstAttribute="trailing" secondItem="7sg-7q-LuH" secondAttribute="trailing" constant="8" id="wuZ-BT-qXd"/>
+                                                <constraint firstItem="Hqj-91-sQz" firstAttribute="leading" secondItem="2SG-sn-Xsc" secondAttribute="leading" constant="32" id="wPq-Zs-TLU"/>
+                                                <constraint firstAttribute="trailing" secondItem="7sg-7q-LuH" secondAttribute="trailing" constant="32" id="wuZ-BT-qXd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -203,11 +234,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Filters" id="S8Q-b5-2KP">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="dRv-4l-Dop">
+                            <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onCancelButton:" destination="b3d-yZ-npb" id="xiT-ld-19q"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="IRO-bq-Ua4">
+                            <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="onSearchButton:" destination="b3d-yZ-npb" id="YJH-4M-w6L"/>
                             </connections>
@@ -231,7 +264,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="aeP-KP-H1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.78186468908629436" green="0.1858815029894309" blue="0.15172287309456797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -253,6 +286,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ocZ-s1-4qP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -264,4 +298,7 @@
             <point key="canvasLocation" x="3212" y="357.57121439280365"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Filter" width="30" height="24"/>
+    </resources>
 </document>

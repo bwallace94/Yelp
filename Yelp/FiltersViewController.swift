@@ -93,6 +93,10 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 40.0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60.0
+    }
+    
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
         let indexPath = tableView.indexPath(for: switchCell)!
         switchStates[indexPath] = value

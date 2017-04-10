@@ -14,6 +14,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     var filteredBusinsses: [Business]!
     var searchController: UISearchController!
     
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBOutlet weak var mapButton: UIBarButtonItem!
     @IBOutlet weak var businessTableView: UITableView!
     
@@ -86,10 +87,11 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         mapButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
+        filterButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
         businessTableView.delegate = self
         businessTableView.dataSource = self
         businessTableView.rowHeight = UITableViewAutomaticDimension
-        businessTableView.estimatedRowHeight = 120
+        businessTableView.estimatedRowHeight = 135
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
