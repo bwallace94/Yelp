@@ -16,9 +16,41 @@ class Business: NSObject {
     let distance: String?
     let ratingImageURL: URL?
     let reviewCount: NSNumber?
+    let url: String?
+    let displayPhone: String?
+    let rating: Double?
+    let snippetText: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
+        
+        let urlString = dictionary["url"] as? String
+        if urlString != nil {
+            url = urlString!
+        } else {
+            url = nil
+        }
+        
+        let displayPhoneString = dictionary["display_phone"] as? String
+        if displayPhoneString != nil {
+            displayPhone = displayPhoneString!
+        } else {
+            displayPhone = nil
+        }
+        
+        let ratingString = dictionary["rating"] as? String
+        if ratingString != nil {
+            rating = Double(ratingString!)
+        } else {
+            rating = nil
+        }
+        
+        let snippetTextString = dictionary["snippet_text"] as? String
+        if snippetTextString != nil {
+            snippetText = snippetTextString!
+        } else {
+            snippetText = nil
+        }
         
         let imageURLString = dictionary["image_url"] as? String
         if imageURLString != nil {

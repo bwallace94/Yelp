@@ -52,6 +52,7 @@
 		C9FBD90E1E9A057200052BB2 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9FBD9001E9A057200052BB2 /* Nunito-Regular.ttf */; };
 		C9FBD90F1E9A057200052BB2 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9FBD9011E9A057200052BB2 /* Nunito-SemiBold.ttf */; };
 		C9FBD9101E9A057200052BB2 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9FBD9021E9A057200052BB2 /* Nunito-SemiBoldItalic.ttf */; };
+		C9FBD9141E9B4CA300052BB2 /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FBD9131E9B4CA300052BB2 /* BusinessDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		C9FBD9001E9A057200052BB2 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		C9FBD9011E9A057200052BB2 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
 		C9FBD9021E9A057200052BB2 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C9FBD9131E9B4CA300052BB2 /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		EF53DC2D7A8303A68532E7C6 /* Pods-Yelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +226,7 @@
 			children = (
 				22AAAA9B1AEA1EC300A544AF /* BusinessesViewController.swift */,
 				C9FB80881E97548A00A31040 /* FiltersViewController.swift */,
+				C9FBD9131E9B4CA300052BB2 /* BusinessDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				222D8A7D19CCFAE000D2DB53 /* YelpClient.swift in Sources */,
 				222D8A5B19CCF9F900D2DB53 /* AppDelegate.swift in Sources */,
 				C9FB80871E9751FE00A31040 /* SwitchCell.swift in Sources */,
+				C9FBD9141E9B4CA300052BB2 /* BusinessDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

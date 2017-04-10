@@ -138,6 +138,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="businessTableView" destination="KGB-L9-X8e" id="W6t-vL-3k2"/>
+                        <outlet property="mapButton" destination="Da5-VM-1kS" id="lm1-Ix-X0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgb-4b-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,6 +214,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelButton" destination="dRv-4l-Dop" id="q0M-Jp-JM3"/>
+                        <outlet property="searchButton" destination="IRO-bq-Ua4" id="zDT-VP-to6"/>
                         <outlet property="tableView" destination="Af5-d5-Sex" id="caW-zW-VsI"/>
                     </connections>
                 </viewController>

@@ -14,6 +14,8 @@ import UIKit
 
 class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwitchCellDelegate {
 
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     weak var delegate: FiltersViewControllerDelegate?
@@ -54,9 +56,13 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }else if section == 3 {
             textToDisplay = "Category"
         }
-        let labelField = UILabel(frame: CGRect(x: 50, y: 10, width: 250, height: 30))
+        let labelField = UILabel(frame: CGRect(x: 10, y: 5, width: 250, height: 30))
         labelField.text = textToDisplay
+        labelField.font = UIFont(name: "Montserrat-Bold", size: 18)
+        labelField.textColor = UIColor.init(colorLiteralRed: 136/255.0, green: 139/255.0, blue: 141/255.0, alpha: 1)
         headerView.addSubview(labelField)
+        let backgroundColor = UIColor.init(colorLiteralRed: 253/255.0, green: 207/255.0, blue: 9/255.0, alpha: 1)
+        headerView.backgroundColor = backgroundColor
         return headerView
     }
     
@@ -84,7 +90,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         if section == 0 {
             return 0.0
         }
-        return 50.0
+        return 40.0
     }
     
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
@@ -100,6 +106,9 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         sortBy = sortByOptions()
         tableView.dataSource = self
         tableView.delegate = self
+        cancelButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
+        searchButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 22)!]
     }
     
     override func didReceiveMemoryWarning() {

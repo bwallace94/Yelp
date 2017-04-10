@@ -14,9 +14,14 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     var filteredBusinsses: [Business]!
     var searchController: UISearchController!
     
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     @IBOutlet weak var businessTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredBusinsses!.count
         }
@@ -27,25 +32,44 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = businessTableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessCell
         if searchController.isActive && searchController.searchBar.text != "" {
-            cell.business = filteredBusinsses[indexPath.row]
+            cell.business = filteredBusinsses[indexPath.section]
         } else {
-            cell.business = businesses[indexPath.row]
+            cell.business = businesses[indexPath.section]
         }
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let navigationController = segue.destination as! UINavigationController
-        let filtersViewController = navigationController.topViewController as! FiltersViewController
-        filtersViewController.delegate = self
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 5, y: 5, width: 30, height: 30))
+        let backgroundColor = UIColor.init(colorLiteralRed: 253/255.0, green: 207/255.0, blue: 9/255.0, alpha: 1)
+        headerView.backgroundColor = backgroundColor
+        return headerView
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2.0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if sender is UIBarButtonItem {
+            let navigationController = segue.destination as! UINavigationController
+            let filtersViewController = navigationController.topViewController as! FiltersViewController
+            filtersViewController.delegate = self
+        } else {
+            let vc = segue.destination as! BusinessDetailViewController
+            let indexPath = businessTableView.indexPath(for: sender as! BusinessCell)!
+            var business = businesses[indexPath.section]
+            if searchController.isActive && searchController.searchBar.text != "" {
+                business = filteredBusinsses[indexPath.section]
+            }
+            vc.business = business
+        }
+        
+    }
+
     
     func filterViewConroller(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : Any]) {
         let categories = filters["categories"] as? [String]
@@ -61,7 +85,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        mapButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
         businessTableView.delegate = self
         businessTableView.dataSource = self
         businessTableView.rowHeight = UITableViewAutomaticDimension
