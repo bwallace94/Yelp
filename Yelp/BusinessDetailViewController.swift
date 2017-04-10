@@ -81,6 +81,7 @@ class BusinessDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 22)!]
     }
 
     override func didReceiveMemoryWarning() {

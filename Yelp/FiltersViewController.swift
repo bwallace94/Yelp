@@ -24,6 +24,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     var distances: [[String:String]]!
     var sortBy: [[String:String]]!
     var categories: [[String:String]]!
+    var start = false
     
     var switchStates = [IndexPath:Bool]()
     
@@ -75,9 +76,16 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         if indexPath.section == 1 {
             cell.switchLabel.text = distances[indexPath.row]["name"]
+            if indexPath.row == 0 && !start {
+                switchStates[indexPath] = true
+            }
         }
         if indexPath.section == 2 {
             cell.switchLabel.text = sortBy[indexPath.row]["name"]
+            if indexPath.row == 0 && !start {
+                switchStates[indexPath] = true
+                start = true
+            }
         }
         if indexPath.section == 3 {
             cell.switchLabel.text = categories[indexPath.row]["name"]
@@ -100,7 +108,49 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
         let indexPath = tableView.indexPath(for: switchCell)!
         switchStates[indexPath] = value
+        if indexPath.section == 1 {
+            alwaysDistSelected(switchCell: switchCell, didChangeValue: value)
+        }
+        if indexPath.section == 2 {
+            alwaysSortSelected(switchCell: switchCell, didChangeValue: value)
+            
+        }
     }
+    
+    func alwaysDistSelected(switchCell: SwitchCell, didChangeValue value: Bool) {
+        let selectorIndexPath = tableView.indexPath(for: switchCell)!
+        for cell in switchStates {
+            if cell.key.section == 1 {
+                switchStates[cell.key] = false
+            }
+        }
+        if value {
+            switchStates[selectorIndexPath] = true
+        } else {
+            let autoCell = tableView.cellForRow(at: IndexPath(row: 0, section: 1))!
+            let autoIndexPath = tableView.indexPath(for: autoCell)!
+            switchStates[autoIndexPath] = true
+        }
+        tableView.reloadData()
+    }
+    
+    func alwaysSortSelected(switchCell: SwitchCell, didChangeValue value: Bool) {
+        let selectorIndexPath = tableView.indexPath(for: switchCell)!
+        for cell in switchStates {
+            if cell.key.section == 2 {
+                switchStates[cell.key] = false
+            }
+        }
+        if value {
+            switchStates[selectorIndexPath] = true
+        } else {
+            let autoCell = tableView.cellForRow(at: IndexPath(row: 0, section: 2))!
+            let autoIndexPath = tableView.indexPath(for: autoCell)!
+            switchStates[autoIndexPath] = true
+        }
+        tableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

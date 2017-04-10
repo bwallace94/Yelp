@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FiltersViewControllerDelegate {
     
@@ -68,19 +69,18 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             vc.business = business
         }
-        
     }
 
-    
     func filterViewConroller(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : Any]) {
         let categories = filters["categories"] as? [String]
         let sort = filters["sort"] as? YelpSortMode
         let deal = filters["deal"] as? Bool
         let distance = filters["distance"] as? String
-        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         Business.searchWithTerm(term: "Restaurants", sort: sort, categories: categories, distance: distance, deals: deal) { (businesses: [Business]!, error: Error!) -> Void in
             self.businesses = businesses
             self.businessTableView.reloadData()
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
     
@@ -99,16 +99,21 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         searchController.searchBar.placeholder = "Search Business Names"
         searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.titleView = searchController.searchBar
+        let font = UIFont(name: "Nunito-Bold", size: 18)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font!], for: UIControlState())
+        navigationController?.navigationBar.tintColor = UIColor.init(red: 3/255.0, green: 16/255.0, blue: 101/255.0, alpha: 1)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         Business.searchWithTerm(term: "Restaurants", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
             self.businessTableView.reloadData()
-            if let businesses = businesses {
-                for business in businesses {
-                    //print(business.name!)
-                    //print(business.address!)
-                }
-            }
+            MBProgressHUD.hide(for: self.view, animated: true)
+//            if let businesses = businesses {
+//                for business in businesses {
+//                    //print(business.name!)
+//                    //print(business.address!)
+//                }
+//            }
             }
         )
         
