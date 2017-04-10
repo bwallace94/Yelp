@@ -22,6 +22,7 @@ class Business: NSObject {
     let snippetText: String?
     
     init(dictionary: NSDictionary) {
+        print(dictionary)
         name = dictionary["name"] as? String
         
         let urlString = dictionary["url"] as? String
@@ -38,12 +39,7 @@ class Business: NSObject {
             displayPhone = nil
         }
         
-        let ratingString = dictionary["rating"] as? String
-        if ratingString != nil {
-            rating = Double(ratingString!)
-        } else {
-            rating = nil
-        }
+        rating = dictionary["rating"] as? Double
         
         let snippetTextString = dictionary["snippet_text"] as? String
         if snippetTextString != nil {

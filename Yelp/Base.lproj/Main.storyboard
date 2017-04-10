@@ -75,10 +75,10 @@
                                                     <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-q8-Fgl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0hG-q8-Fgl">
                                                     <rect key="frame" x="146" y="40" width="83" height="15"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="83" id="FjA-D5-PyH"/>
+                                                        <constraint firstAttribute="width" constant="83" id="n6O-5G-85n"/>
                                                         <constraint firstAttribute="height" constant="15" id="xEv-TD-IcJ"/>
                                                     </constraints>
                                                 </imageView>
@@ -91,7 +91,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ook-QI-BRb">
                                                     <rect key="frame" x="352.5" y="8" width="14.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
-                                                    <color key="textColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -102,7 +102,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="gck-Is-PNc" secondAttribute="bottom" constant="8" id="1on-L5-kt5"/>
                                                 <constraint firstAttribute="trailing" secondItem="gck-Is-PNc" secondAttribute="trailing" constant="8" id="4kF-Ki-5wN"/>
                                                 <constraint firstAttribute="trailing" secondItem="aEU-tg-z1M" secondAttribute="trailing" id="4q4-BK-sp0"/>
-                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="5rC-RI-6k8"/>
                                                 <constraint firstAttribute="trailing" secondItem="VWq-n2-xep" secondAttribute="trailing" id="6uP-kv-BT7"/>
                                                 <constraint firstAttribute="bottom" secondItem="aEU-tg-z1M" secondAttribute="bottom" id="HA7-Yg-HoV"/>
                                                 <constraint firstItem="ook-QI-BRb" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" constant="8" id="P4A-hv-upV"/>
@@ -117,6 +116,7 @@
                                                 <constraint firstItem="wiX-q8-Kxh" firstAttribute="top" secondItem="IxG-hK-HyB" secondAttribute="bottom" constant="2" id="gtH-hU-zWj"/>
                                                 <constraint firstItem="0hG-q8-Fgl" firstAttribute="top" secondItem="7qx-0Q-0uf" secondAttribute="bottom" constant="2" id="h3T-uy-87R"/>
                                                 <constraint firstItem="aEU-tg-z1M" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" id="pV3-tf-edf"/>
+                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="146" id="v7f-SZ-dU6"/>
                                                 <constraint firstItem="wiX-q8-Kxh" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="8" id="vAC-pj-kL7"/>
                                                 <constraint firstItem="6Hi-0X-Hr6" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="yi2-zy-JMg"/>
                                             </constraints>
@@ -176,11 +176,11 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-B6-Mva">
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HfL-B6-Mva">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-Ke-ZWj">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6TH-Ke-ZWj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -197,7 +197,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
-                                <rect key="frame" x="73" y="230.5" width="229" height="25"/>
+                                <rect key="frame" x="73" y="211.5" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -208,14 +208,8 @@
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Wildfire.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mb-xf-81r">
-                                <rect key="frame" x="134" y="257.5" width="107" height="25"/>
-                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
-                                <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Here is a description of the restaurant!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOA-au-15l">
-                                <rect key="frame" x="64" y="325.5" width="247" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Here is a description of the restaurant!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOA-au-15l">
+                                <rect key="frame" x="64" y="289.5" width="247" height="44"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -226,21 +220,21 @@
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cw-6q-9l1">
-                                <rect key="frame" x="132" y="154" width="112" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cw-6q-9l1">
+                                <rect key="frame" x="146" y="150" width="84" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="1De-R0-88y"/>
-                                    <constraint firstAttribute="height" constant="30" id="yam-Cr-GBN"/>
+                                    <constraint firstAttribute="width" constant="84" id="1De-R0-88y"/>
+                                    <constraint firstAttribute="height" constant="15" id="yam-Cr-GBN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-M3-HRx">
-                                <rect key="frame" x="152" y="186" width="71.5" height="16.5"/>
+                                <rect key="frame" x="152" y="167" width="72" height="17"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(917) 334-4583" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-M6-tcx">
-                                <rect key="frame" x="121" y="284.5" width="134" height="25"/>
+                                <rect key="frame" x="121" y="240.5" width="134" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -260,36 +254,33 @@
                             <constraint firstItem="JtA-M3-HRx" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="HIh-w4-Op3"/>
                             <constraint firstItem="0Cw-6q-9l1" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="NDC-Br-jvT"/>
                             <constraint firstItem="QKr-WO-Nas" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="Nnx-X1-Gvg"/>
+                            <constraint firstItem="Spy-M6-tcx" firstAttribute="top" secondItem="QKr-WO-Nas" secondAttribute="bottom" constant="4" id="Nrz-Ih-Xwl"/>
                             <constraint firstItem="nPl-2w-KVC" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" constant="24" id="P16-Ip-1CM"/>
                             <constraint firstItem="6TH-Ke-ZWj" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" id="PYJ-7I-oAy"/>
                             <constraint firstAttribute="trailing" secondItem="TOA-au-15l" secondAttribute="trailing" constant="64" id="Q36-NX-aKq"/>
                             <constraint firstItem="4vE-MB-a8A" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="Qes-eT-e1M"/>
-                            <constraint firstItem="0Cw-6q-9l1" firstAttribute="top" secondItem="176-Fp-Ehf" secondAttribute="bottom" constant="8" id="Rc3-aC-eNE"/>
+                            <constraint firstItem="0Cw-6q-9l1" firstAttribute="top" secondItem="176-Fp-Ehf" secondAttribute="bottom" constant="4" id="Rc3-aC-eNE"/>
                             <constraint firstItem="6TH-Ke-ZWj" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" id="RzC-Wb-X2M"/>
                             <constraint firstItem="176-Fp-Ehf" firstAttribute="top" secondItem="4vE-MB-a8A" secondAttribute="bottom" constant="4" id="UZP-uK-f1I"/>
                             <constraint firstItem="4vE-MB-a8A" firstAttribute="top" secondItem="2Sv-Su-3qw" secondAttribute="top" constant="95" id="aDc-y6-HPj"/>
-                            <constraint firstItem="Spy-M6-tcx" firstAttribute="top" secondItem="3Mb-xf-81r" secondAttribute="bottom" constant="2" id="b4c-WP-6zI"/>
                             <constraint firstItem="176-Fp-Ehf" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="bbi-UB-Ufe"/>
-                            <constraint firstItem="3Mb-xf-81r" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="bnW-bi-HGj"/>
                             <constraint firstItem="HfL-B6-Mva" firstAttribute="leading" secondItem="2Sv-Su-3qw" secondAttribute="leading" id="cOI-8P-8Lo"/>
                             <constraint firstItem="Spy-M6-tcx" firstAttribute="centerX" secondItem="2Sv-Su-3qw" secondAttribute="centerX" id="fgK-5Y-Bar"/>
                             <constraint firstItem="nPl-2w-KVC" firstAttribute="top" secondItem="kkI-J8-Z0r" secondAttribute="bottom" constant="24" id="fz6-RE-yE2"/>
                             <constraint firstItem="tNO-av-EGY" firstAttribute="top" secondItem="HfL-B6-Mva" secondAttribute="bottom" id="jMT-gG-DEF"/>
-                            <constraint firstItem="3Mb-xf-81r" firstAttribute="top" secondItem="QKr-WO-Nas" secondAttribute="bottom" constant="2" id="nLu-3F-31C"/>
-                            <constraint firstItem="TOA-au-15l" firstAttribute="top" secondItem="Spy-M6-tcx" secondAttribute="bottom" constant="16" id="xtH-AF-3vE"/>
+                            <constraint firstItem="TOA-au-15l" firstAttribute="top" secondItem="Spy-M6-tcx" secondAttribute="bottom" constant="24" id="xtH-AF-3vE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressLabel" destination="QKr-WO-Nas" id="mcP-kU-Zdw"/>
-                        <outlet property="categoriesLabel" destination="176-Fp-Ehf" id="Zk0-JT-Ir5"/>
-                        <outlet property="descriptionLabel" destination="TOA-au-15l" id="FEx-0r-2t4"/>
-                        <outlet property="displayNumberLabel" destination="Spy-M6-tcx" id="6PH-hV-jTs"/>
-                        <outlet property="distanceLabel" destination="nPl-2w-KVC" id="iUF-bs-mmw"/>
-                        <outlet property="nameLabel" destination="4vE-MB-a8A" id="llx-EI-YqV"/>
-                        <outlet property="ratingImageView" destination="0Cw-6q-9l1" id="iQx-dM-ef4"/>
-                        <outlet property="reviewCountLabel" destination="JtA-M3-HRx" id="zYv-Tq-T44"/>
-                        <outlet property="thumbImageView" destination="HfL-B6-Mva" id="DZS-tb-U5D"/>
-                        <outlet property="urlLabel" destination="3Mb-xf-81r" id="1va-De-cKo"/>
+                        <outlet property="addressLabel" destination="QKr-WO-Nas" id="Ojp-YR-6t4"/>
+                        <outlet property="categoriesLabel" destination="176-Fp-Ehf" id="SeM-72-lIL"/>
+                        <outlet property="descriptionLabel" destination="TOA-au-15l" id="W6T-qQ-udA"/>
+                        <outlet property="displayNumberLabel" destination="Spy-M6-tcx" id="3Pl-QS-w6R"/>
+                        <outlet property="distanceLabel" destination="nPl-2w-KVC" id="6TD-0L-ujc"/>
+                        <outlet property="nameLabel" destination="4vE-MB-a8A" id="hui-xV-n9b"/>
+                        <outlet property="ratingImageView" destination="0Cw-6q-9l1" id="XI7-8K-nBJ"/>
+                        <outlet property="reviewCountLabel" destination="JtA-M3-HRx" id="kkC-OU-Twb"/>
+                        <outlet property="thumbImageView" destination="HfL-B6-Mva" id="CA4-j6-8US"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqQ-Vf-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -399,7 +390,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
