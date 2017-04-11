@@ -24,7 +24,7 @@
         <!--Businesses View Controller-->
         <scene sceneID="5L9-Uz-lNK">
             <objects>
-                <viewController id="2xI-yr-O5N" customClass="BusinessesViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2xI-yr-O5N" customClass="BusinessesViewController" customModule="Remy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hR0-74-jRp"/>
                         <viewControllerLayoutGuide type="bottom" id="VBY-gq-v8E"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="115" id="bLz-7C-B40" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="115" id="bLz-7C-B40" customClass="BusinessCell" customModule="Remy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bLz-7C-B40" id="QRj-MW-wEq">
@@ -144,7 +144,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wFh-9z-cC0">
-                        <barButtonItem key="leftBarButtonItem" tag="1" image="Filter" style="plain" id="yBO-zF-Qex">
+                        <barButtonItem key="leftBarButtonItem" tag="1" image="Filter" id="yBO-zF-Qex">
                             <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="5hJ-38-PWS" kind="presentation" identifier="filtersSegue" id="7tX-tm-G3Y"/>
@@ -170,7 +170,7 @@
         <!--Business Detail View Controller-->
         <scene sceneID="uK2-yM-sxg">
             <objects>
-                <viewController id="8mF-cd-Dqn" customClass="BusinessDetailViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8mF-cd-Dqn" customClass="BusinessDetailViewController" customModule="Remy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kkI-J8-Z0r"/>
                         <viewControllerLayoutGuide type="bottom" id="tNO-av-EGY"/>
@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-MB-a8A">
-                                <rect key="frame" x="94" y="95" width="187" height="29.5"/>
+                                <rect key="frame" x="94.5" y="95" width="187" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -200,7 +200,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
-                                <rect key="frame" x="73" y="210" width="229" height="25"/>
+                                <rect key="frame" x="73.5" y="210" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -293,7 +293,7 @@
         <!--Map View Controller-->
         <scene sceneID="p9H-BP-3oy">
             <objects>
-                <viewController id="kQf-Bm-I5Z" customClass="MapViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kQf-Bm-I5Z" customClass="MapViewController" customModule="Remy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F9p-w7-k3K"/>
                         <viewControllerLayoutGuide type="bottom" id="YsG-md-1cD"/>
@@ -302,16 +302,16 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U6-DC-es6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U6-DC-es6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7U6-DC-es6" firstAttribute="leading" secondItem="3V4-h9-Fz9" secondAttribute="leading" id="31s-Jo-0Z7"/>
-                            <constraint firstItem="7U6-DC-es6" firstAttribute="top" secondItem="F9p-w7-k3K" secondAttribute="bottom" id="Iur-K1-D4k"/>
+                            <constraint firstAttribute="bottom" secondItem="7U6-DC-es6" secondAttribute="bottom" id="XHB-4U-BYi"/>
                             <constraint firstAttribute="trailing" secondItem="7U6-DC-es6" secondAttribute="trailing" id="aVz-yt-KSP"/>
-                            <constraint firstItem="YsG-md-1cD" firstAttribute="top" secondItem="7U6-DC-es6" secondAttribute="bottom" id="xL6-oz-7Q3"/>
+                            <constraint firstItem="7U6-DC-es6" firstAttribute="top" secondItem="3V4-h9-Fz9" secondAttribute="top" id="wFN-Dd-WPY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -320,12 +320,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mp-tQ-Lgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3212" y="1041"/>
+            <point key="canvasLocation" x="3212" y="1040.3298350824589"/>
         </scene>
         <!--Filters-->
         <scene sceneID="ruK-6e-o12">
             <objects>
-                <viewController id="b3d-yZ-npb" customClass="FiltersViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="b3d-yZ-npb" customClass="FiltersViewController" customModule="Remy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ysT-GN-tiS"/>
                         <viewControllerLayoutGuide type="bottom" id="Dey-rc-vAy"/>
@@ -339,7 +339,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="88" id="IM9-ZE-G2x" customClass="SwitchCell" customModule="Yelp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="88" id="IM9-ZE-G2x" customClass="SwitchCell" customModule="Remy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IM9-ZE-G2x" id="2SG-sn-Xsc">

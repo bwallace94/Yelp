@@ -8,16 +8,44 @@
 
 import UIKit
 import MBProgressHUD
+import CoreLocation
 
-class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FiltersViewControllerDelegate {
+class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FiltersViewControllerDelegate, CLLocationManagerDelegate {
     
     var businesses: [Business]!
     var filteredBusinsses: [Business]!
     var searchController: UISearchController!
+    var locationManager : CLLocationManager!
+    var longitude = 37.785771
+    var latitude = -122.406165
+    var locationString: String!
     
     @IBOutlet weak var filterButton: UIBarButtonItem!
     @IBOutlet weak var mapButton: UIBarButtonItem!
     @IBOutlet weak var businessTableView: UITableView!
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.authorizedWhenInUse {
+            print("HERE2")
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print("HERE")
+            self.longitude = (location.coordinate.longitude)
+            self.latitude = (location.coordinate.latitude)
+            self.locationString = "\(self.longitude),\(self.latitude)"
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            Business.searchWithTerm(term: "Restaurants", ll: locationString, completion: { (businesses: [Business]?, error: Error?) -> Void in
+                
+                self.businesses = businesses
+                self.businessTableView.reloadData()
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+        )}
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -88,7 +116,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         let deal = filters["deal"] as? Bool
         let distance = filters["distance"] as? String
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        Business.searchWithTerm(term: "Restaurants", sort: sort, categories: categories, distance: distance, deals: deal) { (businesses: [Business]!, error: Error!) -> Void in
+        Business.searchWithTerm(term: "Restaurants", ll: locationString, sort: sort, categories: categories, distance: distance, deals: deal) { (businesses: [Business]!, error: Error!) -> Void in
             self.businesses = businesses
             self.businessTableView.reloadData()
             MBProgressHUD.hide(for: self.view, animated: true)
@@ -97,6 +125,12 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationString = "\(longitude),\(latitude)"
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = 200
+        locationManager.requestAlwaysAuthorization()
         mapButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
         filterButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Nunito-Bold", size: 18)!], for: UIControlState())
         businessTableView.delegate = self
@@ -114,7 +148,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: font!], for: UIControlState())
         navigationController?.navigationBar.tintColor = UIColor.init(red: 3/255.0, green: 16/255.0, blue: 101/255.0, alpha: 1)
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        Business.searchWithTerm(term: "Restaurants", completion: { (businesses: [Business]?, error: Error?) -> Void in
+        Business.searchWithTerm(term: "Restaurants", ll: locationString, completion: { (businesses: [Business]?, error: Error?) -> Void in
             
             self.businesses = businesses
             self.businessTableView.reloadData()
@@ -125,7 +159,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
 //                    //print(business.address!)
 //                }
 //            }
-            }
+        }
         )
         
         /* Example of Yelp search with more search options specified

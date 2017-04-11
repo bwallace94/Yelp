@@ -26,6 +26,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.distanceFilter = 200
         locationManager.requestWhenInUseAuthorization()
+        for business in businesses {
+            if business.address != nil {
+                addAnnotationAtAddress(address: business.address!, title: business.name!)
+            }
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -47,14 +52,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             let region = MKCoordinateRegionMake(location.coordinate, span)
             mapView.setRegion(region, animated: false)
         }
-    }
-    
-    // add an Annotation with a coordinate: CLLocationCoordinate2D
-    func addAnnotationAtCoordinate(coordinate: CLLocationCoordinate2D) {
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordinate
-        annotation.title = "An annotation!"
-        mapView.addAnnotation(annotation)
     }
     
     // add an annotation with an address: String
