@@ -113,7 +113,6 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         if indexPath.section == 2 {
             alwaysSortSelected(switchCell: switchCell, didChangeValue: value)
-            
         }
     }
     

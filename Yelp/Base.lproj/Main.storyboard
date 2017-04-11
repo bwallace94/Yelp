@@ -129,7 +129,7 @@
                                             <outlet property="ratingImageView" destination="0hG-q8-Fgl" id="9VZ-mp-50E"/>
                                             <outlet property="reviewsCountLabel" destination="6Hi-0X-Hr6" id="1jv-KR-1zH"/>
                                             <outlet property="thumbImageView" destination="VWq-n2-xep" id="ulb-fg-PMR"/>
-                                            <segue destination="8mF-cd-Dqn" kind="show" id="CwM-MV-V4O"/>
+                                            <segue destination="8mF-cd-Dqn" kind="show" identifier="detailsSegue" id="CwM-MV-V4O"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,14 +144,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wFh-9z-cC0">
-                        <barButtonItem key="leftBarButtonItem" image="Filter" id="yBO-zF-Qex">
+                        <barButtonItem key="leftBarButtonItem" tag="1" image="Filter" id="yBO-zF-Qex">
                             <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="5hJ-38-PWS" kind="presentation" id="7tX-tm-G3Y"/>
+                                <segue destination="5hJ-38-PWS" kind="presentation" identifier="filtersSegue" id="7tX-tm-G3Y"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Map" id="Da5-VM-1kS">
+                        <barButtonItem key="rightBarButtonItem" tag="2" title="Map" id="Da5-VM-1kS">
                             <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="kQf-Bm-I5Z" kind="show" identifier="mapSegue" id="Ccs-7g-hzN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -185,56 +188,56 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-MB-a8A">
-                                <rect key="frame" x="94" y="95" width="187" height="30"/>
+                                <rect key="frame" x="94.5" y="95" width="187" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPl-2w-KVC">
-                                <rect key="frame" x="24" y="24" width="42" height="17"/>
+                                <rect key="frame" x="24" y="24" width="41.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
-                                <rect key="frame" x="73" y="211.5" width="229" height="25"/>
+                                <rect key="frame" x="73.5" y="210" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="176-Fp-Ehf">
-                                <rect key="frame" x="131" y="129" width="113" height="17"/>
+                                <rect key="frame" x="131" y="128.5" width="113" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Here is a description of the restaurant!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOA-au-15l">
-                                <rect key="frame" x="64" y="289.5" width="247" height="44"/>
+                                <rect key="frame" x="64" y="288" width="247" height="44"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-g6-Uu6">
-                                <rect key="frame" x="336" y="24" width="15" height="17"/>
+                                <rect key="frame" x="336.5" y="24" width="14.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Cw-6q-9l1">
-                                <rect key="frame" x="146" y="150" width="84" height="15"/>
+                                <rect key="frame" x="146" y="149" width="84" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="1De-R0-88y"/>
                                     <constraint firstAttribute="height" constant="15" id="yam-Cr-GBN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="469 Reviews" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtA-M3-HRx">
-                                <rect key="frame" x="152" y="167" width="72" height="17"/>
+                                <rect key="frame" x="152.5" y="166" width="71.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
                                 <color key="textColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(917) 334-4583" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spy-M6-tcx">
-                                <rect key="frame" x="121" y="240.5" width="134" height="25"/>
+                                <rect key="frame" x="121.5" y="239" width="133.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -285,7 +288,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqQ-Vf-Qwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="1041.2293853073463"/>
+            <point key="canvasLocation" x="2222" y="1170"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="p9H-BP-3oy">
+            <objects>
+                <viewController id="kQf-Bm-I5Z" customClass="MapViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9p-w7-k3K"/>
+                        <viewControllerLayoutGuide type="bottom" id="YsG-md-1cD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3V4-h9-Fz9">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U6-DC-es6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7U6-DC-es6" firstAttribute="leading" secondItem="3V4-h9-Fz9" secondAttribute="leading" id="31s-Jo-0Z7"/>
+                            <constraint firstItem="7U6-DC-es6" firstAttribute="top" secondItem="F9p-w7-k3K" secondAttribute="bottom" id="Iur-K1-D4k"/>
+                            <constraint firstAttribute="trailing" secondItem="7U6-DC-es6" secondAttribute="trailing" id="aVz-yt-KSP"/>
+                            <constraint firstItem="YsG-md-1cD" firstAttribute="top" secondItem="7U6-DC-es6" secondAttribute="bottom" id="xL6-oz-7Q3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="7U6-DC-es6" id="GfB-uD-3OI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mp-tQ-Lgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3212" y="1041"/>
         </scene>
         <!--Filters-->
         <scene sceneID="ruK-6e-o12">

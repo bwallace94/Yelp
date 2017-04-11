@@ -56,11 +56,22 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if sender is UIBarButtonItem {
+        if segue.identifier == "filtersSegue"{
+            searchController.searchBar.text = ""
+            searchController.isActive = false
             let navigationController = segue.destination as! UINavigationController
             let filtersViewController = navigationController.topViewController as! FiltersViewController
             filtersViewController.delegate = self
-        } else {
+        } else if segue.identifier == "mapSegue" {
+            searchController.searchBar.text = ""
+            searchController.isActive = false
+            let vc = segue.destination as! MapViewController
+            var sendBusinesses = businesses
+            if searchController.isActive && searchController.searchBar.text != "" {
+                sendBusinesses = filteredBusinsses
+            }
+            vc.businesses = sendBusinesses
+        } else if segue.identifier == "detailSegue" { 
             let vc = segue.destination as! BusinessDetailViewController
             let indexPath = businessTableView.indexPath(for: sender as! BusinessCell)!
             var business = businesses[indexPath.section]
