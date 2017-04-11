@@ -115,8 +115,8 @@
                                                 <constraint firstItem="IxG-hK-HyB" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="topMargin" constant="70" id="gPa-NV-IqM"/>
                                                 <constraint firstItem="wiX-q8-Kxh" firstAttribute="top" secondItem="IxG-hK-HyB" secondAttribute="bottom" constant="2" id="gtH-hU-zWj"/>
                                                 <constraint firstItem="0hG-q8-Fgl" firstAttribute="top" secondItem="7qx-0Q-0uf" secondAttribute="bottom" constant="2" id="h3T-uy-87R"/>
+                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="lhH-bZ-1ge"/>
                                                 <constraint firstItem="aEU-tg-z1M" firstAttribute="top" secondItem="QRj-MW-wEq" secondAttribute="top" id="pV3-tf-edf"/>
-                                                <constraint firstItem="0hG-q8-Fgl" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="146" id="v7f-SZ-dU6"/>
                                                 <constraint firstItem="wiX-q8-Kxh" firstAttribute="leading" secondItem="QRj-MW-wEq" secondAttribute="leading" constant="8" id="vAC-pj-kL7"/>
                                                 <constraint firstItem="6Hi-0X-Hr6" firstAttribute="centerX" secondItem="QRj-MW-wEq" secondAttribute="centerX" id="yi2-zy-JMg"/>
                                             </constraints>
@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-MB-a8A">
-                                <rect key="frame" x="94.5" y="95" width="187" height="29.5"/>
+                                <rect key="frame" x="95" y="95" width="187" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -200,7 +200,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
-                                <rect key="frame" x="73.5" y="210" width="229" height="25"/>
+                                <rect key="frame" x="74" y="210" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -450,7 +450,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfL-b0-kr8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="aeP-KP-H1a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aeP-KP-H1a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -472,7 +472,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5hJ-38-PWS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ocZ-s1-4qP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ocZ-s1-4qP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
