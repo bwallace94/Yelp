@@ -2,7 +2,7 @@
 
 **Remy** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: **X** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 - [ ] Search results page
    - [ ] Infinite scroll for restaurant results.
-   - [ ] Implement map view of restaurant results.
+   - [X] Implement map view of restaurant results.
 - [ ] Filter page
    - [ ] Implement a custom switch instead of the default UISwitch.
    - [ ] Distance filter should expand as in the real Yelp app
@@ -33,12 +33,13 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Added progress HUD.
-- [ ] Network error banner.
+- [ ] Load businesses based on user location.
+- [ ] Add button in map view leading to details screen
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Way to modularize expanding table view.
+2. Better way to organize logic in View Controllers.
 
 ## Video Walkthrough
 
@@ -50,11 +51,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Loading businesses initially on user location isn't working.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2017 Bria Ayana Wallace
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
