@@ -144,7 +144,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wFh-9z-cC0">
-                        <barButtonItem key="leftBarButtonItem" tag="1" image="Filter" id="yBO-zF-Qex">
+                        <barButtonItem key="leftBarButtonItem" tag="1" image="Filter" style="plain" id="yBO-zF-Qex">
                             <color key="tintColor" red="0.01176470588" green="0.062745098040000002" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="5hJ-38-PWS" kind="presentation" identifier="filtersSegue" id="7tX-tm-G3Y"/>
@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-MB-a8A">
-                                <rect key="frame" x="94.5" y="95" width="187" height="29.5"/>
+                                <rect key="frame" x="94" y="95" width="187" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -200,7 +200,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="88 Division St., Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-WO-Nas">
-                                <rect key="frame" x="73.5" y="210" width="229" height="25"/>
+                                <rect key="frame" x="73" y="210" width="229" height="25"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

@@ -71,7 +71,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
                 sendBusinesses = filteredBusinsses
             }
             vc.businesses = sendBusinesses
-        } else if segue.identifier == "detailSegue" { 
+        } else if segue.identifier == "detailsSegue" { 
             let vc = segue.destination as! BusinessDetailViewController
             let indexPath = businessTableView.indexPath(for: sender as! BusinessCell)!
             var business = businesses[indexPath.section]

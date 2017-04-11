@@ -19,7 +19,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                     <color key="backgroundColor" red="0.42745098040000001" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face logo" translatesAutoresizingMaskIntoConstraints="NO" id="RhG-PK-kPs">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Face-logo" translatesAutoresizingMaskIntoConstraints="NO" id="RhG-PK-kPs">
                     <rect key="frame" x="183.5" y="190" width="91" height="100"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ej-89-9OZ">
@@ -46,6 +46,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Face logo" width="91" height="100"/>
+        <image name="Face-logo" width="91" height="100"/>
     </resources>
 </document>
