@@ -21,8 +21,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Search results page
-   - [ ] Infinite scroll for restaurant results.
+- [X] Search results page
+   - [X] Infinite scroll for restaurant results.
    - [X] Implement map view of restaurant results.
 - [ ] Filter page
    - [ ] Implement a custom switch instead of the default UISwitch.
@@ -31,7 +31,7 @@ The following **optional** features are implemented:
 - [X] Implement the restaurant detail page.
 
 The following **additional** features are implemented:
-
+- [X] Custom user interface.
 - [X] Added progress HUD.
 - [ ] Load businesses based on user location.
 - [ ] Add button in map view leading to details screen
@@ -45,7 +45,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/Guy1qH3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
