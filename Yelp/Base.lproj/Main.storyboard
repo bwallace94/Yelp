@@ -380,6 +380,36 @@
                                             <outlet property="switchLabel" destination="Hqj-91-sQz" id="VLp-Dp-8ne"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SeeAllCell" rowHeight="88" id="lME-Nz-vzU">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lME-Nz-vzU" id="98S-JU-dlv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEE ALL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmp-up-MX5">
+                                                    <rect key="frame" x="152" y="32" width="71" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy1-5z-AaT">
+                                                    <rect key="frame" x="0.0" y="86" width="375" height="2"/>
+                                                    <color key="backgroundColor" red="0.99215686270000003" green="0.81176470590000005" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="ds2-Fi-XFe"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cy1-5z-AaT" secondAttribute="bottom" id="40s-9L-SKU"/>
+                                                <constraint firstItem="Pmp-up-MX5" firstAttribute="centerY" secondItem="98S-JU-dlv" secondAttribute="centerY" id="HI6-bz-OIe"/>
+                                                <constraint firstItem="cy1-5z-AaT" firstAttribute="leading" secondItem="98S-JU-dlv" secondAttribute="leading" id="puP-oo-2zx"/>
+                                                <constraint firstAttribute="trailing" secondItem="cy1-5z-AaT" secondAttribute="trailing" id="u2U-BI-kug"/>
+                                                <constraint firstItem="Pmp-up-MX5" firstAttribute="centerX" secondItem="98S-JU-dlv" secondAttribute="centerX" id="uWm-lA-cHr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -413,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wg9-2u-h7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3865" y="358"/>
+            <point key="canvasLocation" x="3864.8000000000002" y="357.57121439280365"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vfS-EK-zQt">

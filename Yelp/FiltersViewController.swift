@@ -38,7 +38,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         if section == 2 {
             return sortBy.count
         } else {
-            return categories.count
+            return categories.count + 1
         }
     }
     
@@ -69,6 +69,9 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 3 && indexPath.row == categories.count {
+            return tableView.dequeueReusableCell(withIdentifier: "SeeAllCell", for: indexPath)
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath) as! SwitchCell
         cell.delegate = self
         if indexPath.section == 0 {
