@@ -22,7 +22,7 @@ class Business: NSObject {
     let snippetText: String?
     
     init(dictionary: NSDictionary) {
-        print(dictionary)
+        //print(dictionary)
         name = dictionary["name"] as? String
         
         let urlString = dictionary["url"] as? String
@@ -112,11 +112,11 @@ class Business: NSObject {
         return businesses
     }
     
-    class func searchWithTerm(term: String, ll: String, completion: @escaping ([Business]?, Error?) -> Void) {
-        _ = YelpClient.sharedInstance.searchWithTerm(term, ll, completion: completion)
+    class func searchWithTerm(term: String, ll: String, offset: Int, completion: @escaping ([Business]?, Error?) -> Void) {
+        _ = YelpClient.sharedInstance.searchWithTerm(term, ll, offset, completion: completion)
     }
     
-    class func searchWithTerm(term: String, ll: String, sort: YelpSortMode?, categories: [String]?, distance: String?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> Void {
-        _ = YelpClient.sharedInstance.searchWithTerm(term, ll: ll, sort: sort, categories: categories, distance: distance, deals: deals, completion: completion)
+    class func searchWithTerm(term: String, ll: String, offset: Int, sort: YelpSortMode?, categories: [String]?, distance: String?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> Void {
+        _ = YelpClient.sharedInstance.searchWithTerm(term, ll: ll, offset, sort: sort, categories: categories, distance: distance, deals: deals, completion: completion)
     }
 }

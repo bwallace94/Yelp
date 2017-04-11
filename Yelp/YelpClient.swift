@@ -44,15 +44,15 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         self.requestSerializer.saveAccessToken(token)
     }
     
-    func searchWithTerm(_ term: String, _ ll: String, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
-        return searchWithTerm(term, ll: ll, sort: nil, categories: nil, distance: nil, deals: nil, completion: completion)
+    func searchWithTerm(_ term: String, _ ll: String, _ offset: Int, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+        return searchWithTerm(term, ll: ll, offset, sort: nil, categories: nil, distance: nil, deals: nil, completion: completion)
     }
     
-    func searchWithTerm(_ term: String, ll: String, sort: YelpSortMode?, categories: [String]?, distance: String?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+    func searchWithTerm(_ term: String, ll: String, _ offset: Int, sort: YelpSortMode?, categories: [String]?, distance: String?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
         // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
         
         // Default the location to San Francisco
-        var parameters: [String : AnyObject] = ["term": term as AnyObject, "ll": ll as AnyObject]
+        var parameters: [String : AnyObject] = ["term": term as AnyObject, "ll": ll as AnyObject, "offset": offset as AnyObject]
         
         if sort != nil {
             parameters["sort"] = sort!.rawValue as AnyObject?

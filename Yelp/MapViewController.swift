@@ -41,7 +41,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == CLAuthorizationStatus.authorizedWhenInUse {
+        if status == CLAuthorizationStatus.authorizedAlways {
             locationManager.startUpdatingLocation()
         }
     }

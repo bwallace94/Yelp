@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol FiltersViewControllerDelegate {
-    @objc optional func filterViewConroller(filtersViewController: FiltersViewController, didUpdateFilters filters: [String:Any])
+    @objc optional func filterViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String:Any])
 }
 
 class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SwitchCellDelegate {
@@ -200,7 +200,7 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         if selectedCategories.count > 0 {
             filters["categories"] = selectedCategories
         }
-        delegate?.filterViewConroller?(filtersViewController: self, didUpdateFilters: filters)
+        delegate?.filterViewController?(filtersViewController: self, didUpdateFilters: filters)
     }
     
     func dealOptions() -> [[String:String]] {
